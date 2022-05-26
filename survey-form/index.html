@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>Entertainment Survey Form</title>
+  </head>
+  <body>
+    <main>
+      <h1 id="title">Entertainment Survey Form</h1>
+      <p id="description">
+        Thank you for taking the time to help us improve the platform
+      </p>
+      <form id="survey-form">
+        <fieldset class="form-group">
+          <label for="name" id="name-label">
+            Name<sup class="required">*</sup>
+          </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+            required
+          />
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="email" id="email-label">
+            Email<sup class="required">*</sup>
+          </label>
+
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="number" id="number-label">Age</label>
+          <input
+            type="number"
+            name="number"
+            id="number"
+            min="6"
+            max="99"
+            placeholder="Enter your age"
+          />
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="dropdown">What's your favorite type content?</label>
+          <select name="dropdown" id="dropdown">
+            <option value="" selected>Select a option</option>
+            <option value="Anime">Anime</option>
+            <option value="Manga">Manga</option>
+            <option value="Hentai">Hentai</option>
+            <option value="Manhwa">Manhwa</option>
+          </select>
+        </fieldset>
+        <fieldset class="form-group">
+          <p>Would you recommend this site to a friend?</p>
+          <label for="definitely">
+            <input
+              type="radio"
+              name="recommend"
+              value="Definitely"
+              id="definitely"
+            />
+            Definitely
+          </label>
+          <label for="maybe">
+            <input type="radio" name="recommend" value="Maybe" id="maybe" />
+            Maybe
+          </label>
+          <label for="notsure">
+            <input
+              type="radio"
+              name="recommend"
+              value="Not sure"
+              id="notsure"
+            />
+            Not sure</label
+          >
+        </fieldset>
+        <fieldset class="form-group">
+          <p>
+            What's your favorite gender? <span>(Check all that apply)</span>
+          </p>
+          <p></p>
+          <label for="check">
+            <input type="checkbox" value="Ecchi" />
+            Ecchi
+          </label>
+          <label for="check">
+            <input type="checkbox" value="Yaoi" />
+            Yaoi
+          </label>
+          <label for="check">
+            <input type="checkbox" value="Seinen" />
+            Seinen
+          </label>
+          <label for="check">
+            <input type="checkbox" value="Shoujo" />
+            Shoujo
+          </label>
+          <label for="check">
+            <input type="checkbox" value="Shounen" />
+            Shounen
+          </label>
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="comments">Any comments or suggestions?</label>
+          <textarea
+            name="comments"
+            id="comments"
+            cols="30"
+            rows="10"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </fieldset>
+        <fieldset class="form-group">
+          <button type="submit" id="submit">submit</button>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>

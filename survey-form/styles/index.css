@@ -1,0 +1,73 @@
+/*|| General Styles */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url(../images/wallpaperflare.com_wallpaper.jpg) no-repeat;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.required {
+  color: red;
+  font-size: 1em;
+}
+
+/*|| Main Content */
+#survey-form {
+  color: #fff;
+  padding: 3em;
+  margin: 2em auto;
+  max-width: 650px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: rgba(27, 27, 50, 0.8);
+}
+#title,
+#description {
+  text-align: center;
+  margin: 20px;
+  color: #fff;
+  font-weight: 400;
+}
+#description {
+  text-shadow: 1px 1px 1px #000;
+  font-style: italic;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px;
+}
+.form-group span {
+  font-size: 0.8em;
+  color: #cfcfcf;
+}
+.form-group textarea {
+  font-size: 1.2em;
+  padding: 5px;
+}
+label {
+  margin: 0 0 8px;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+input,
+select {
+  font-size: 1em;
+  padding: 10px 8px;
+  border-radius: 5px;
+}
+p {
+  margin: 5px 0;
+}
+#submit {
+  padding: 10px 0;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  background-color: hsl(120, 100%, 30%);
+  color: #fff;
+  cursor: pointer;
+}
