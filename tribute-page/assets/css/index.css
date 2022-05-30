@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --base-color: hsla(355, 78%, 31%, 1);
+  --bg-color: hsla(233, 13%, 13%, 1);
+  --base-font: 'Lato', sans-serif;
+  --alt-font: 'Lora', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: white;
+  font-size: 1.6rem;
+  font-family: var(--base-font);
+  background-color: var(--bg-color);
+}
+
+/** Header */
+#header {
+  height: 6.4rem;
+}
+
+.nav-bar__links {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 60%;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.nav-bar__link {
+  flex: 1;
+  color: white;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 6.4rem;
+  font-family: var(--base-font);
+}
+.nav-bar__link a {
+  color: white;
+}
+.tribute {
+  flex: 2;
+  font-size: 2.4rem;
+  font-family: var(--alt-font);
+  background-color: var(--base-color);
+}
+/** Home */
+.banner {
+  background: linear-gradient(
+      hsla(233, 13%, 13%, 0.7),
+      hsla(233, 13%, 13%, 0.7)
+    ),
+    url('../images/banner.png') no-repeat center / cover;
+  height: calc(100vh - 6.4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.banner__title {
+  font-size: 7.2rem;
+  text-shadow: -2px 2px hsla(355, 78%, 31%, 1);
+  font-family: var(--alt-font);
+}
+.banner__subtitle {
+  font-size: 2.4rem;
+  text-align: center;
+  max-width: 58rem;
+  line-height: 2.8rem;
+}
+.go-to-discography {
+  position: absolute;
+  bottom: 5.8rem;
+}
+/** Sections */
+.section {
+  margin: 0 28rem;
+  display: grid;
+  padding-top: 15.6rem;
+  padding-bottom: 15.6rem;
+}
+.section h2 {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 3.2rem;
+  font-family: var(--alt-font);
+}
+
+#biography {
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 10.5rem;
+}
+#biography .image img {
+  width: 400px;
+}
+#biography .text {
+  max-width: 64rem;
+}
+
+#biography .text p {
+  margin-bottom: 2rem;
+}
+
+.divisor {
+  height: 3px;
+  background: linear-gradient(90deg, #f2f2f2 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+#discography h2 {
+  margin-bottom: 5.6rem;
+}
+#discography .cards {
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#discography .card {
+  display: flex;
+  padding: 3rem;
+  width: 46rem;
+  justify-content: space-around;
+  box-shadow: 0 0 1rem #000;
+}
+#discography .card h3 {
+  font-family: var(--alt-font);
+  margin-bottom: 1.2rem;
+}
+#discography .card figcaption {
+  text-align: center;
+}
+#discography .card ol {
+  list-style-position: inside;
+}
+#discography p {
+  margin-top: 8rem;
+  text-align: center;
+  font-size: 2rem;
+}
+#discography a {
+  color: #f2f2f2;
+  text-decoration: underline;
+}
+
+/** Footer */
+footer {
+  background: var(--base-color);
+  padding: 2.1rem 8.5rem;
+}
+
+@media (max-width: 1500px) {
+  .section {
+    margin: 0 10%;
+  }
+
+  #biography {
+    grid-auto-flow: row;
+    justify-content: center;
+  }
+  #biography .image {
+    margin: auto;
+  }
+  #discography .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .nav-bar__links {
+    max-width: 100%;
+  }
+  .tribute {
+    font-size: 1.8rem;
+    padding: 0;
+  }
+}
+@media (max-width: 610px) {
+  #discography .card {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}
