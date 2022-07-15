@@ -99,6 +99,12 @@ section header h2 {
   justify-content: space-between;
 }
 
+#header #nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
 #header .nav-links,
 #header div {
   display: flex;
@@ -243,7 +249,7 @@ section header h2 {
   clip-path: circle();
   z-index: -1;
   left: -1%;
-  bottom: -79%;
+  top: 92%;
   background: linear-gradient(
     35.71deg,
     hsla(32, 100%, 83%, 1) 9.11%,
@@ -337,6 +343,7 @@ section header h2 {
 
 .course__price span {
   font-size: 1.6rem;
+  text-align: center;
   color: hsla(0, 0%, 100%, 1);
 }
 
@@ -427,10 +434,10 @@ section header h2 {
 #students-say header {
   padding-top: 12rem;
   margin-bottom: 10rem;
+  color: hsla(0, 0%, 100%, 1);
 }
 
 #students-say header p {
-  color: hsla(0, 0%, 100%, 1);
   font-size: 2rem;
   margin: 0 auto;
   max-width: 56rem;
@@ -452,6 +459,7 @@ section header h2 {
   display: flex;
   gap: 1.4rem;
   align-items: center;
+  color: hsla(0, 0%, 100%, 1);
 }
 #students-say .person img {
   width: 6rem;
@@ -464,7 +472,6 @@ section header h2 {
 }
 #students-say .person p {
   opacity: 80%;
-  color: hsla(0, 0%, 100%, 1);
 }
 
 /*? || Faq */
@@ -580,7 +587,7 @@ section header h2 {
   width: 12.3rem;
   height: 12.3rem;
   clip-path: circle();
-  z-index: 0;
+  z-index: -1;
   top: 0;
   right: 3.1rem;
   background: linear-gradient(35.71deg, #ffd7a9 9.11%, #ffae70 71.64%);
@@ -612,7 +619,7 @@ section header h2 {
 }
 
 #get-started h2 {
-  width: 65rem;
+  max-width: 65rem;
   margin: auto;
   margin-bottom: 3rem;
 }
@@ -657,6 +664,7 @@ footer header,
 #form {
   flex: 1;
   height: 6.6rem;
+  min-height: 6.6rem;
   padding-left: 4rem;
   padding-right: 0.8rem;
   max-width: 89rem;
@@ -710,4 +718,84 @@ footer nav li {
 }
 
 @media screen and (max-width: 1320px) {
+  #banner .video-container {
+    position: relative;
+    margin-top: 5rem;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    right: unset;
+    top: unset;
+    transform: unset;
+    padding-top: 56.25%;
+    box-shadow: 0 3.2rem 4.4rem #818a8c;
+    border-radius: 2rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #header .nav-links,
+  #header div {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  section header h2 {
+    font-size: 3rem;
+  }
+  .course {
+    gap: 4rem;
+    flex-direction: column;
+  }
+  .course__price {
+    transform: scale(0.8);
+  }
+  #instructor {
+    flex-direction: column;
+    align-items: center;
+  }
+  #instructor .text {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  #header {
+    overflow: hidden;
+  }
+  #banner {
+    text-align: center;
+  }
+  .students {
+    justify-content: center;
+  }
+  #statistics .statistics-content {
+    gap: 2rem;
+    padding: 2rem;
+    height: unset;
+    flex-direction: column;
+  }
+  footer header {
+    flex-direction: column;
+  }
+  footer header #form {
+    width: 100%;
+  }
+
+  footer nav {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 480px) {
+  .students {
+    flex-direction: column;
+  }
+  .students-imgs {
+    position: relative;
+    left: 5%;
+  }
+  .students p {
+    left: unset;
+  }
+  footer nav ul:first-child {
+    columns: 1;
+  }
 }

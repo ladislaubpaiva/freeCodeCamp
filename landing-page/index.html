@@ -20,10 +20,10 @@
   <body>
     <header id="header">
       <nav id="nav-bar">
+        <a href="#">
+          <img src="./assets/img/logo.svg" alt="logo" id="header-img" />
+        </a>
         <ul class="nav-links">
-          <a href="#">
-            <img src="./assets/img/logo.svg" alt="logo" id="header-img" />
-          </a>
           <li><a href="#courses" class="nav-link">Course topics</a></li>
           <li>
             <a href="#students-say" class="nav-link">What students say</a>
@@ -373,9 +373,14 @@
       const swiper = new Swiper('.swiper', {
         spaceBetween: 20,
         loop: true,
-        slidesPerView: 2,
+        slidesPerView: 1,
         autoplay: {
           delay: 5000,
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 2,
+          },
         },
       });
     </script>
