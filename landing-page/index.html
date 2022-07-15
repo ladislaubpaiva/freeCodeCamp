@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Mulish:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Flowbase | Course Landing Page</title>
   </head>
   <body>
     <header id="header">
@@ -24,18 +24,25 @@
           <img src="./assets/img/logo.svg" alt="logo" id="header-img" />
         </a>
         <ul class="nav-links">
-          <li><a href="#courses" class="nav-link">Course topics</a></li>
-          <li>
-            <a href="#students-say" class="nav-link">What students say</a>
-          </li>
-          <li>
-            <a href="#faq" class="nav-link">FAQ</a>
-          </li>
+          <div>
+            <li><a href="#courses" class="nav-link">Course topics</a></li>
+            <li>
+              <a href="#students-say" class="nav-link">What students say</a>
+            </li>
+            <li>
+              <a href="#faq" class="nav-link">FAQ</a>
+            </li>
+          </div>
+          <div>
+            <li>
+              <a href="#" class="">Sign in</a>
+            </li>
+            <a href="#get-started" class="bg-button">Get started</a>
+          </div>
         </ul>
       </nav>
-      <div>
-        <a href="#" class="">Sign in</a>
-        <a href="#get-started" class="bg-button">Get started</a>
+      <div class="menu">
+        <span></span>
       </div>
     </header>
     <main>
@@ -341,6 +348,7 @@
             id="email"
             type="email"
             name="email"
+            required
             placeholder="Stay in the loop  - sign up with your email"
           />
           <input id="submit" type="submit" value="Subscribe" />
@@ -370,6 +378,15 @@
     </footer>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
+      document.querySelector('.menu').addEventListener('click', e => {
+        e.currentTarget.classList.toggle('close');
+        e.currentTarget.parentElement.classList.toggle('open');
+      });
+      document.querySelectorAll('#header .nav-links a').forEach(el => {
+        el.addEventListener('click', e => {
+          document.querySelector('.menu').click();
+        });
+      });
       const swiper = new Swiper('.swiper', {
         spaceBetween: 20,
         loop: true,

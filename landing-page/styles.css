@@ -24,9 +24,12 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  overflow-x: hidden;
   color: hsla(219, 100%, 14%, 1);
   font: 400 1.6rem 'Mulish', sans-serif;
+}
+
+main {
+  overflow-x: hidden;
 }
 
 h1,
@@ -96,20 +99,22 @@ section header h2 {
   z-index: 100;
   border: 1px solid hsla(0, 0%, 59%, 0.15);
   background: hsla(0, 0%, 100%, 1);
-  justify-content: space-between;
 }
 
 #header #nav-bar {
+  flex: 1;
+}
+#header #nav-bar,
+#header .nav-links,
+#header div {
   display: flex;
   align-items: center;
   gap: 5rem;
 }
-
-#header .nav-links,
-#header div {
-  display: flex;
-  gap: 5rem;
-  align-items: center;
+#header .nav-links {
+  flex: 1;
+  justify-content: space-between;
+  transition: 0.3s;
 }
 
 #banner {
@@ -445,6 +450,8 @@ section header h2 {
 
 #students-say .swiper-slide {
   padding: 5rem;
+  max-height: 69rem;
+  height: fit-content;
   border-radius: 2rem;
   background-color: hsla(281, 100%, 22%, 0.2);
 }
@@ -733,15 +740,96 @@ footer nav li {
   }
 }
 @media screen and (max-width: 1200px) {
-  #header .nav-links,
-  #header div {
+  #header .nav-links {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -40vw;
+    width: 40vw;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    border-left: 1px solid hsla(0, 0%, 59%, 0.15);
+    background-color: hsla(0, 0%, 100%, 1);
+  }
+  #header .nav-links div {
     display: none;
+    transition: 0.3;
+  }
+
+  #header.open .nav-links {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+    justify-content: center;
+  }
+
+  #header.open .nav-links div {
+    display: flex;
+  }
+  #header .nav-links,
+  #header .nav-links div {
+    flex-direction: column;
+  }
+  .menu {
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .menu span {
+    width: 24px;
+    height: 4px;
+    background-color: black;
+    position: relative;
+    transition: 0.3s;
+  }
+
+  .menu span::before,
+  .menu span::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    display: block;
+    background-color: black;
+    transition: 0.3s;
+  }
+
+  .menu span::before {
+    top: -8px;
+  }
+
+  .menu span::after {
+    bottom: -8px;
+  }
+
+  .menu.close span::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  .menu.close span::after {
+    transform: rotate(45deg);
+    bottom: 0;
+  }
+
+  .menu.close span {
+    background-color: transparent;
   }
 }
 @media screen and (max-width: 1024px) {
-  section header h2 {
+  #header .nav-links {
+    right: -50vw;
+    width: 50vw;
+  }
+  #banner h1 {
+    font-size: 4rem;
+  }
+  section header h2,
+  #instructor h2 {
     font-size: 3rem;
   }
+
   .course {
     gap: 4rem;
     flex-direction: column;
@@ -756,11 +844,14 @@ footer nav li {
   #instructor .text {
     text-align: center;
   }
+
+  #instructor p,
+  #students-say header p,
+  #students-say .swiper-slide > p {
+    font-size: 1.8rem;
+  }
 }
 @media screen and (max-width: 768px) {
-  #header {
-    overflow: hidden;
-  }
   #banner {
     text-align: center;
   }
@@ -785,6 +876,10 @@ footer nav li {
   }
 }
 @media screen and (max-width: 480px) {
+  #header .nav-links {
+    right: -80vw;
+    width: 80vw;
+  }
   .students {
     flex-direction: column;
   }
@@ -794,6 +889,10 @@ footer nav li {
   }
   .students p {
     left: unset;
+  }
+  #instructor img {
+    max-height: 28rem;
+    max-width: 28rem;
   }
   footer nav ul:first-child {
     columns: 1;
