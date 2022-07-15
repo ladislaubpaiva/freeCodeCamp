@@ -1,0 +1,599 @@
+/*? || Base */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+  background-color: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: hsla(277, 100%, 51%, 1);
+}
+
+body {
+  overflow-x: hidden;
+  color: hsla(219, 100%, 14%, 1);
+  font: 400 1.6rem 'Mulish', sans-serif;
+}
+
+h1,
+h2,
+h3,
+summary {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: hsla(219, 100%, 14%, 1);
+  transition: 0.3s;
+}
+
+a:hover {
+  color: hsla(277, 100%, 51%, 1);
+}
+
+.bg-button {
+  font-weight: 700;
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  border-radius: 3.3rem;
+  color: hsla(0, 0%, 100%, 1);
+  background: hsla(288, 100%, 53%, 1)
+    linear-gradient(
+      44.11deg,
+      hsla(288, 100%, 53%, 1) 15.75%,
+      hsla(277, 100%, 51%, 1) 84.63%
+    );
+  transition: all 0.3s;
+}
+
+.bg-button:hover {
+  color: hsla(0, 0%, 100%, 1);
+  filter: hue-rotate(-10deg);
+}
+
+body > header,
+section,
+body > footer {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+section header {
+  text-align: center;
+}
+
+section header h2 {
+  font-size: 4.6rem;
+  margin-bottom: 2rem;
+}
+
+/*? || Header */
+
+#header {
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  justify-content: space-between;
+}
+
+#header .nav-links,
+#header div {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}
+
+#banner {
+  background: linear-gradient(
+    74.06deg,
+    hsla(0, 0%, 75%, 0.05) 8.64%,
+    hsla(277, 100%, 51%, 0.05) 106.87%,
+    hsla(277, 100%, 51%, 0.05) 106.87%
+  );
+}
+
+/*? || Banner */
+
+#banner {
+  position: relative;
+  padding-top: 13.4rem;
+  padding-bottom: 13.4rem;
+  border-top: 1px solid hsla(0, 0%, 59%, 0.05);
+  border-bottom: 1px solid hsla(0, 0%, 59%, 0.05);
+}
+
+#banner h1 {
+  font-size: 6rem;
+  max-width: 53rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+#banner .text p {
+  font-size: 2rem;
+  max-width: 56rem;
+  margin-bottom: 4rem;
+}
+
+#banner .bg-button {
+  padding: 2.1rem 4.8rem;
+  margin-bottom: 10rem;
+}
+
+.students {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.students img:not(:first-child) {
+  display: inline-block;
+  position: relative;
+  left: -2.5rem;
+}
+
+.students img:last-child {
+  left: -5rem;
+}
+
+.students p {
+  position: relative;
+  left: -4.5rem;
+  font-weight: 400;
+}
+
+.students p span {
+  color: hsla(277, 100%, 51%, 1);
+}
+
+.video-container {
+  position: absolute;
+  width: 59rem;
+  height: 33rem;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 3.2rem 4.4rem #818a8c;
+  border-radius: 2rem 0 0 2rem;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem 0 0 2rem;
+}
+
+/*? || Statistics */
+
+#statistics {
+  margin-top: 10rem;
+}
+
+#statistics .statistics-content {
+  position: relative;
+  display: flex;
+  height: 17rem;
+  border-radius: 21px;
+  background: #fff;
+  border: 1px solid hsla(190, 9%, 91%, 1);
+}
+
+#statistics .statistic {
+  flex: 1;
+  display: grid;
+  text-align: center;
+  place-content: center;
+  text-transform: capitalize;
+}
+
+#statistics .statistic h3 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+#statistics .statistic p {
+  color: hsla(219, 15%, 36%, 1);
+}
+
+.statistics-content::before {
+  content: '';
+  position: absolute;
+  width: 28.8rem;
+  height: 28.8rem;
+  clip-path: circle();
+  z-index: -1;
+  /* Distance * 100 / width */
+  left: -23rem;
+  top: 6%;
+  background: linear-gradient(44.11deg, #cd10ff 15.75%, #9f06ff 84.63%);
+}
+
+.statistics-content::after {
+  content: '';
+  position: absolute;
+  width: 8.6rem;
+  height: 8.6rem;
+  clip-path: circle();
+  z-index: -1;
+  left: -1%;
+  bottom: -79%;
+  background: linear-gradient(
+    35.71deg,
+    hsla(32, 100%, 83%, 1) 9.11%,
+    hsla(26, 100%, 72%, 1) 71.64%
+  );
+}
+
+/*? || Courses */
+
+#courses {
+  margin-top: 15rem;
+  position: relative;
+}
+
+#courses::before {
+  content: '';
+  position: absolute;
+  width: 38.2rem;
+  height: 38.2rem;
+  clip-path: circle();
+  z-index: -1;
+  top: 0;
+  right: -24.8rem;
+  background: linear-gradient(
+    35.71deg,
+    hsla(32, 100%, 83%, 1) 9.11%,
+    hsla(26, 100%, 72%, 1) 71.64%
+  );
+}
+
+#courses header p {
+  color: hsla(219, 15%, 36%, 1);
+  font-size: 2rem;
+  margin: 0 auto 6rem;
+  max-width: 57rem;
+}
+
+.course {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2.1rem;
+  padding: 4rem 5rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(
+    44.11deg,
+    hsla(288, 100%, 53%, 0.05) 15.75%,
+    hsla(277, 100%, 51%, 0.05) 84.63%
+  );
+}
+
+.course__info {
+  display: flex;
+  gap: 2rem;
+}
+
+.course__info img {
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.0535402);
+}
+
+.course__info h3 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.course__info p {
+  max-width: 50rem;
+  line-height: 2.4rem;
+  color: hsla(219, 15%, 36%, 1);
+}
+
+.course__price {
+  display: flex;
+  gap: 3.4rem;
+  align-items: center;
+  font-weight: 600;
+  padding: 1.8rem 3.8rem;
+  color: hsla(277, 52%, 47%, 1);
+}
+
+.course__price div {
+  width: 0.1rem;
+  height: 3rem;
+  background-color: hsla(219, 15%, 36%, 1);
+}
+
+.course__price span {
+  font-size: 1.6rem;
+  color: hsla(0, 0%, 100%, 1);
+}
+
+/*? || Instructor */
+
+#instructor {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 12rem;
+}
+#instructor h2 {
+  font-size: 4.8rem;
+  max-width: 53.8rem;
+  margin-top: 20.8rem;
+}
+#instructor p {
+  font-size: 2rem;
+  max-width: 56rem;
+  margin-top: 2rem;
+  line-height: 30px;
+}
+
+#instructor > * {
+  flex-shrink: 0;
+}
+
+#instructor .image {
+  position: relative;
+  margin-top: 13.1rem;
+}
+
+#instructor img {
+  width: 35.4rem;
+  height: 35.4rem;
+  overflow: hidden;
+  border-radius: 50%;
+  background: linear-gradient(
+    44.11deg,
+    hsla(288, 100%, 53%, 1) 15.75%,
+    hsla(277, 100%, 51%, 1) 84.63%
+  );
+}
+
+#instructor .image::before {
+  content: '';
+  position: absolute;
+  width: 8.8rem;
+  height: 8.8rem;
+  clip-path: circle();
+  left: -1%;
+  top: -3.107344633%;
+  z-index: -1;
+  background: linear-gradient(
+    35.71deg,
+    hsla(32, 100%, 83%, 1) 9.11%,
+    hsla(26, 100%, 72%, 1) 71.64%
+  );
+}
+#instructor .image::after {
+  content: '';
+  opacity: 30%;
+  position: absolute;
+  width: 13.2rem;
+  height: 13.2rem;
+  clip-path: circle();
+  right: -11.3%;
+  bottom: -5%;
+  z-index: -1;
+  background: linear-gradient(
+    35.71deg,
+    hsla(32, 100%, 83%, 1) 9.11%,
+    hsla(26, 100%, 72%, 1) 71.64%
+  );
+}
+
+/*? || Students Say */
+
+#students-say {
+  padding-bottom: 12rem;
+  background: linear-gradient(
+    44.11deg,
+    hsla(288, 100%, 53%, 1) 15.75%,
+    hsla(288, 100%, 53%, 1) 15.76%,
+    hsla(277, 100%, 51%, 1) 84.63%
+  );
+}
+
+#students-say header {
+  padding-top: 12rem;
+  margin-bottom: 10rem;
+}
+
+#students-say header p {
+  color: hsla(0, 0%, 100%, 1);
+  font-size: 2rem;
+  margin: 0 auto;
+  max-width: 56rem;
+}
+
+#students-say .swiper-slide {
+  padding: 5rem;
+  border-radius: 2rem;
+  background-color: hsla(281, 100%, 22%, 0.2);
+}
+
+#students-say .swiper-slide > p {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+  color: hsla(0, 0%, 100%, 1);
+}
+#students-say .person {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+}
+#students-say .person img {
+  width: 6rem;
+  height: 6rem;
+  clip-path: circle();
+}
+
+#students-say .person h3 {
+  font-size: 1.6rem;
+}
+#students-say .person p {
+  opacity: 80%;
+  color: hsla(0, 0%, 100%, 1);
+}
+
+#faq {
+  margin-top: 15rem;
+}
+
+#faq header h2 {
+  margin-bottom: 6rem;
+}
+
+.faq {
+  display: grid;
+  gap: 2rem;
+  max-width: 85rem;
+  margin: 0 auto 12rem;
+}
+.faq details {
+  padding: 4rem;
+  border: 0.1rem solid transparent;
+  border-image-slice: 1;
+  border-radius: 2.1rem;
+  position: relative;
+  background: hsla(0, 0%, 100%, 1);
+  background-clip: padding-box;
+}
+
+.faq details::after {
+  content: '';
+  position: absolute;
+  top: -0.1rem;
+  bottom: -0.1rem;
+  left: -0.1rem;
+  right: -0.1rem;
+  opacity: 20%;
+  background: linear-gradient(44.11deg, #cd10ff 15.75%, #9f06ff 84.63%);
+  z-index: -1;
+  border-radius: 2.1rem;
+}
+
+.faq details summary {
+  position: relative;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.faq details summary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 4.8rem;
+  height: 4.8rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: linear-gradient(
+    35.71deg,
+    hsla(32, 100%, 83%, 0.2) 9.11%,
+    hsla(26, 100%, 72%, 0.2) 71.64%
+  );
+}
+
+.faq details summary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 4.8rem;
+  height: 4.8rem;
+  transform: translateY(-50%) rotate(180deg);
+  background: url('./assets/img/arrow.svg') center no-repeat;
+  transition: all 0.3;
+}
+
+.faq details[open] summary::before {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.faq details p {
+  margin-top: 2rem;
+  line-height: 2.6rem;
+  color: hsla(219, 15%, 36%, 1);
+}
+
+#get-started .promo {
+  border-radius: 3.3rem;
+  padding: 0.8rem 3.4rem;
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    hsla(32, 100%, 83%, 0.2) 0%,
+    hsla(26, 100%, 72%, 0.2) 100%
+  );
+  margin-bottom: 5rem;
+}
+#get-started .promo h3 {
+  font-size: 1.2rem;
+  letter-spacing: 0.258rem;
+  text-transform: uppercase;
+  background: linear-gradient(
+    44.11deg,
+    hsla(288, 100%, 53%, 1) 15.75%,
+    hsla(277, 100%, 51%, 1) 84.63%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+}
+
+#get-started h2 {
+  width: 65rem;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+#get-started .bg-button {
+  font-size: 2rem;
+  padding: 2rem 5rem;
+  border-radius: 0;
+  margin: 0 auto;
+  display: block;
+  width: fit-content;
+  margin-bottom: 12rem;
+}
+
+footer {
+  background: linear-gradient(44.11deg, #cd10ff 15.75%, #9f06ff 84.63%);
+}
+
+@media screen and (min-width: 1490px) {
+  .video-container {
+    right: 16rem;
+    border-radius: 2rem;
+  }
+
+  .video-container iframe {
+    right: 16rem;
+    border-radius: 2rem;
+  }
+}
